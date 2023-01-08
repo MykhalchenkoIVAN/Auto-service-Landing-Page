@@ -1,0 +1,532 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.container {
+  background-color: white;
+  width: 168rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 75rem -webkit-min-content 15rem;
+  grid-template-rows: 75rem min-content 15rem;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: repeat(4, -webkit-min-content);
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: 1fr repeat(2, -webkit-min-content) 1fr;
+  grid-template-columns: 1fr repeat(2, min-content) 1fr;
+}
+
+.header {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 23rem repeat(3, -webkit-min-content) 23rem;
+  grid-template-columns: 23rem repeat(3, min-content) 23rem;
+  grid-template-rows: 10rem repeat(2, -webkit-min-content);
+  grid-template-rows: 10rem repeat(2, min-content);
+}
+.header__header {
+  grid-column: 2/-1;
+}
+.header .title__h1 {
+  grid-column: 2/-1;
+  grid-row: 2/3;
+}
+.header__btn {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+
+.section-2 {
+  grid-column: 2/4;
+  grid-gap: 3rem 3rem;
+  display: grid;
+  grid-template-rows: repeat(4, -webkit-min-content);
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: repeat(3, 1fr);
+}
+.section-2 .card__top {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+}
+.section-2 .card__bottom {
+  grid-row: 4/5;
+}
+.section-3 {
+  grid-column: 1/-1;
+  background: silver;
+  display: grid;
+  grid-template-columns: minmax(49rem, 49rem) minmax(-webkit-min-content, 51.3rem);
+  grid-template-columns: minmax(49rem, 49rem) minmax(min-content, 51.3rem);
+  -moz-column-gap: 18.2rem;
+       column-gap: 18.2rem;
+}
+.section-3 img {
+  grid-column: 2/3;
+  grid-row: 1/5;
+  justify-self: end;
+  align-self: center;
+}
+.section-3 .title__h2 {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.section-3 .paragraph {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.section-3 .title__h6 {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.section-4 {
+  grid-column: 2/4;
+  display: grid;
+  grid-template-rows: repeat(3, -webkit-min-content);
+  grid-template-rows: repeat(3, min-content);
+  grid-template-columns: repeat(3, 1fr);
+}
+.section-4 .card__top {
+  grid-row: 4/5;
+}
+.section-4 .section-4__span {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}
+.section-4 .title__h5 {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+}
+.section-4 .card__top {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+}
+.section-5 {
+  grid-column: 1/-1;
+  background: yellow;
+  display: grid;
+  grid-template-columns: 20.4rem -webkit-min-content;
+  grid-template-columns: 20.4rem min-content;
+  grid-template-rows: repeat(2, -webkit-min-content);
+  grid-template-rows: repeat(2, min-content);
+}
+.section-5 .title__h2 {
+  grid-column: 2/3;
+}
+.section-5 .form {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: -webkit-min-content -webkit-min-content;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: repeat(5, -webkit-min-content);
+  grid-template-rows: repeat(5, min-content);
+  gap: 4.6rem;
+}
+.section-5 .form__input_box--1 {
+  grid-column: 1/2;
+}
+.section-5 .form__input_box--2 {
+  grid-column: 2/3;
+}
+.section-5 .form__input_box--3 {
+  grid-column: 1/2;
+}
+.section-5 .form__input_box--4 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.section-5 .form__input_box--5 {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+}
+.section-5 .form__btn {
+  grid-row: 4/5;
+}
+.section-6 {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 23.1rem 36.4rem 72.4rem -webkit-min-content 24.2rem;
+  grid-template-columns: 23.1rem 36.4rem 72.4rem min-content 24.2rem;
+  grid-template-rows: 1fr -webkit-min-content 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+}
+.section-6 .paragraph {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.section-6__icon {
+  grid-row: 2/3;
+  grid-column: 4/5;
+}
+
+.title__h6 {
+  grid-row: 3/4;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(9rem);
+}
+
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+.header {
+  background-image: url("../img/road-g9875459d1_1920 1.jpg");
+}
+.header__header {
+  width: 121.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header img {
+  margin-top: 2.2rem;
+}
+.header__language {
+  display: flex;
+}
+.header__language--link {
+  margin-right: 0.8rem;
+}
+.header .title__h1 {
+  max-width: 79.1rem;
+}
+
+.section-2 {
+  padding-bottom: 9.8rem;
+}
+
+.card__top {
+  width: 38.6rem;
+  height: 19.6rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  padding-left: 3rem;
+  padding-top: 3.9rem;
+  background-color: white;
+}
+.card__bottom {
+  width: 38.6rem;
+  height: 55.1rem;
+  background-color: white;
+}
+
+.section-4 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.section-4__card {
+  background-color: white;
+  width: 38.6rem;
+  height: 15rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  padding-left: 3rem;
+  padding-top: 3.1rem;
+}
+
+.section-3 {
+  background-color: #171616;
+  padding: 11.7rem 23.9rem;
+}
+.section-3 .title__h2 {
+  max-width: 49rem;
+}
+
+.section-5 {
+  padding: 9.5rem 0 9.8rem;
+  background: black;
+}
+
+.section-6 {
+  background: white;
+}
+.section-6__icon {
+  width: 12rem;
+  display: flex;
+  justify-content: space-between;
+}
+.section-6__icon img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.title__h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: white;
+}
+.title__h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 150%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: black;
+}
+.title__h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 150%;
+  letter-spacing: 0.23em;
+  text-transform: uppercase;
+  color: black;
+}
+.title__h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 150%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: black;
+}
+.title__h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 150%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+}
+.title__h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: black;
+}
+
+.paragraph {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 150%;
+  letter-spacing: 0.15em;
+  color: #B7B7B7;
+}
+
+.btn button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.header__language--link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #B7B7B7;
+  text-decoration: none;
+}
+.header__language--link:hover {
+  color: white;
+}
+
+.section-4__span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 14.8rem;
+  line-height: 150%;
+  color: black;
+  text-align: center;
+}
+
+.section-3 .title__h2 {
+  color: white;
+}
+.section-3 .title__h6 {
+  color: white;
+}
+
+.section-5 .title__h2 {
+  color: white;
+}
+.section-5 .form__input input {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+.section-5 .form__input input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 150%;
+  color: white;
+}
+.section-5 .form__input input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 150%;
+  color: white;
+}
+.section-5 .form__input input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 150%;
+  color: white;
+}
+.section-5 .form__massage textarea {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+.section-5 .form__massage--label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 150%;
+  color: white;
+}
+
+.section-6__paragraph {
+  font-size: 1.5rem;
+}
+
+.margin-bottom-15px {
+  margin-bottom: 1.5rem;
+}
+
+.margin-bottom-20px {
+  margin-bottom: 2rem;
+}
+
+.margin-bottom-40px {
+  margin-bottom: 4rem;
+}
+
+.margin-bottom-48px {
+  margin-bottom: 4.8rem;
+}
+
+.margin-bottom-92px {
+  margin-bottom: 9.2rem;
+}
+
+.margin-bottom-130px {
+  margin-bottom: 13rem;
+}
+
+.margin-top-20px {
+  margin-top: 2rem;
+}
+
+.margin-top-130px {
+  margin-top: 13rem;
+}
+
+.padding-top-20px {
+  padding-top: 2rem;
+}
+
+.translateY-minus-50 {
+  transform: translateY(-50%);
+}
+
+.nav {
+  width: 39.7rem;
+  height: 2.5rem;
+}
+.nav__link {
+  margin-right: 3.5rem;
+}
+.nav__link:last-child {
+  margin-right: 0;
+}
+
+.btn {
+  width: 19.8rem;
+  height: 5rem;
+  background-color: #DB2512;
+}
+.btn button {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+}
+.btn button:hover {
+  color: black;
+}
+
+.form__input_box--2 {
+  height: 3.3rem;
+}
+.form__input_box--4 {
+  height: 3.3rem;
+}
+.form__input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-bottom: 0.1rem white solid;
+}
+.form__input input {
+  background-color: transparent;
+  border: none;
+}
+.form__input input::-moz-placeholder {
+  color: white;
+}
+.form__input input:-ms-input-placeholder {
+  color: white;
+}
+.form__input input::placeholder {
+  color: white;
+}
+.form__massage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.form__massage textarea {
+  width: 100%;
+  height: 13.1rem;
+  background-color: transparent;
+  border: none;
+}/*# sourceMappingURL=style.css.map */
